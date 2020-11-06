@@ -231,10 +231,10 @@ if (x_val > 2 * M_PI) x_val -= 2 * M_PI;
 for(int i = 0; i < 8; i++) {
     gpio_set_level(pinArray[i], 0);
   }
-int iLED = chooseLED(y_val);
-gpio_set_level(pinArray[iLED], 1);
+int _LED = chooseLED(y_val);
+gpio_set_level(pinArray[_LED], 1);
 vTaskDelay((1000 / SEGMENT) / portTICK_PERIOD_MS);
-gpio_set_level(pinArray[iLED], 0);
+gpio_set_level(pinArray[_LED], 0);
 ```
 
 - Update `x_val` by `dt`: 
