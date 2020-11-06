@@ -232,7 +232,6 @@ for(int i = 0; i < 8; i++) {
     gpio_set_level(pinArray[i], 0);
   }
 int iLED = chooseLED(y_val);
-printf("LED taken: %d\n", iLED);
 gpio_set_level(pinArray[iLED], 1);
 vTaskDelay((1000 / SEGMENT) / portTICK_PERIOD_MS);
 gpio_set_level(pinArray[iLED], 0);
